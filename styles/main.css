@@ -1,0 +1,253 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333; /* Main text color */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Fixed width for the header */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    border-right: 2px solid #555; /* Border to separate header from content */
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #555;
+    margin-bottom: 1em;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.fixed-nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 0.5em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+main {
+    margin-left: 270px; /* Adjusted to include margin for the header */
+    padding: 20px;
+}
+
+section {
+    padding: 2em 1em; /* Added padding around content */
+    transition: transform 0.3s;
+    margin-bottom: 30px; /* Margin between sections */
+    background-color: #fff; /* Background color for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+p:hover {
+    transform: scale(1.02);
+    background: #460538;
+}
+li:hover{
+    transform: scale(1.02);
+    background: #0ea02e;
+}
+img:hover{
+    transform: scale(1.15);
+    background: #460538;
+}
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em; /* Margin below section headings */
+    color: #ee8f13; /* Heading text color */
+}
+button,h3:hover{
+    transform: scale(1.02);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5; /* Form background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+    margin-bottom: 30px; /* Margin between form and next section */
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+    color: #333; /* Label text color */
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 0.7em;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust as needed */
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+        border-right: none; /* Remove border for small screens */
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+footer {
+    background-color: #1b4424;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.time-display{
+    color: #e78f0a;
+}

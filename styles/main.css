@@ -23,6 +23,7 @@ header {
     height: 100%; /* Full height */
     overflow-y: auto; /* Allow vertical scrolling */
     border-right: 2px solid #555; /* Border to separate header from content */
+    transition: width 0.3s; /* Smooth transition for width change */
 }
 
 .profile-info {
@@ -46,32 +47,65 @@ header {
     top: 0;
     background: #333;
     padding: 1em;
+    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
+.nav-list {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    margin-bottom: 0.5em;
+.nav-list li {
+    position: relative;
+    margin-bottom: 10px; /* Adjust spacing between list items */
 }
 
-nav ul li a {
-    color: #fff;
+.nav-list li a {
     text-decoration: none;
+    color: #fff;
     padding: 10px;
     display: block;
     transition: background 0.3s;
 }
 
-nav ul li a:hover {
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1d5009;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    width: 100%; 
+    top: 100%; /* Position dropdown below the parent li */
+    left: 60px;
+}
+
+.dropdown a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    transition: background 0.3s;
+}
+
+.dropdown a:hover {
     background: #555;
+}
+
+.dropdown-container:hover .dropdown {
+    display: block;
 }
 
 main {
     margin-left: 270px; /* Adjusted to include margin for the header */
     padding: 20px;
+    transition: margin-left 0.3s; /* Smooth transition for margin change */
 }
 
 section {
@@ -87,21 +121,25 @@ p:hover {
     transform: scale(1.02);
     background: #460538;
 }
-li:hover{
+
+li:hover {
     transform: scale(1.02);
     background: #0ea02e;
 }
-img:hover{
+
+img:hover {
     transform: scale(1.15);
     background: #460538;
 }
+
 h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 0.5em;
     margin-bottom: 1em; /* Margin below section headings */
     color: #ee8f13; /* Heading text color */
 }
-button,h3:hover{
+
+button, h3:hover {
     transform: scale(1.02);
 }
 
@@ -128,8 +166,8 @@ button,h3:hover{
 }
 
 .project-img {
-    max-width: 300px;
-    height: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -230,6 +268,22 @@ form button:hover {
         height: auto;
         padding-bottom: 20px;
         border-right: none; /* Remove border for small screens */
+        position: relative;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     main {
@@ -237,6 +291,7 @@ form button:hover {
         padding: 20px;
     }
 }
+
 footer {
     background-color: #1b4424;
     color: #fff;
@@ -248,6 +303,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-.time-display{
+
+.time-display {
     color: #e78f0a;
 }

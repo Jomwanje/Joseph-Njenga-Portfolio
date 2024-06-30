@@ -58,3 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateTime, 1000);
     updateTime(); // initial call to display time immediately
 });
+
+// Smooth scrolling for anchor links using jQuery
+$('a[href^="#"]').on('click', function(event) {
+    var target = $($(this).attr('href'));
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});

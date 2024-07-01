@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // LinkedIn and GitHub links (update href accordingly)
     const linkedinLink = document.querySelector('.social-links li:nth-child(1) a');
-    linkedinLink.href = 'https://www.linkedin.com/your-profile';
+    linkedinLink.href = 'https://www.linkedin.com/in/joseph-mwaura-77a897203/';
     
     const githubLink = document.querySelector('.social-links li:nth-child(2) a');
-    githubLink.href = 'https://github.com/your-username';
+    githubLink.href = 'https://github.com/Jomwanje/';
 
     // Contact form submission using EmailJS
     const contactForm = document.getElementById('contact-form');

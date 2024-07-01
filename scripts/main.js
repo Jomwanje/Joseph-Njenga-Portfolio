@@ -57,6 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(updateTime, 1000);
     updateTime(); // initial call to display time immediately
+
+    // Toggle navigation menu on mobile
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', function() {
+        nav.classList.toggle('nav-hidden');
+    });
 });
 
 // Smooth scrolling for anchor links using jQuery

@@ -269,6 +269,7 @@ form button:hover {
         padding-bottom: 20px;
         border-right: none; /* Remove border for small screens */
         position: relative;
+        display: none; /* Hide the header on small screens */
     }
 
     .profile-info {
@@ -289,6 +290,40 @@ form button:hover {
     main {
         margin-left: 0;
         padding: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+    
+    .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 5px 0;
+    }
+
+    nav.nav-hidden {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 1em;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+    }
+    
+    .nav-list li {
+        margin: 10px 0;
     }
 }
 

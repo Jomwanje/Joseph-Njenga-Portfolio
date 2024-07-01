@@ -12,6 +12,7 @@ body {
     color: #333; /* Main text color */
 }
 
+/* Header styles */
 header {
     background: #333;
     color: #fff;
@@ -19,12 +20,45 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Fixed width for the header */
+    width: 250px; /* Fixed width for the header on desktop */
     height: 100%; /* Full height */
     overflow-y: auto; /* Allow vertical scrolling */
     border-right: 2px solid #555; /* Border to separate header from content */
     transition: width 0.3s; /* Smooth transition for width change */
+    display: block; /* Display on desktop */
 }
+
+/* Hide header on small screens */
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+}
+
+/* Menu icon styles */
+.menu-icon {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+}
+
+/* Show menu icon on small screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
 
 .profile-info {
     display: flex;

@@ -77,3 +77,11 @@ $('a[href^="#"]').on('click', function(event) {
         }, 1000);
     }
 });
+
+// JavaScript to toggle header visibility on menu icon click
+const menuIcon = document.querySelector('.menu-icon');
+const header = document.querySelector('header');
+
+menuIcon.addEventListener('click', () => {
+    header.classList.toggle('nav-hidden');
+});
